@@ -7,7 +7,7 @@ public class node {
  public  node(){
 
  }
-    public node(long id, String title, String description) {
+    public node( String title, String description) {
       //  this.id = id;
         this.title = title;
         this.description = description;
