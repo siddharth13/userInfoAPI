@@ -17,7 +17,11 @@ import java.util.concurrent.atomic.AtomicLong;
  class Control {
     private List<node> list =new ArrayList<>();
     private AtomicLong id=new AtomicLong();
-
+    @PostMapping("/")
+    public String Home(){
+        String string="Welcome to the First Page."+"\n"+"endpoints=>"+"\n"+"insert: POST for inserting data"+"\n"+"getdata: GET for recieving User Data";
+        return string;
+    }
     @PostMapping("/insert")
     public void putNode(@RequestBody node n){
         list.add(n);
